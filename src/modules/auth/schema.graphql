@@ -1,0 +1,16 @@
+extend type Mutation {
+  login(user: SigninUserInput!): User
+  signup(user: SignupUserInput!): User
+}
+
+input SigninUserInput {
+  email: String!
+  password: String!
+}
+
+input SignupUserInput {
+  email: String!
+  password: String!
+  fullName: String!
+  registrationId: String
+}

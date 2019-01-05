@@ -1,0 +1,46 @@
+scalar Date
+
+scalar Time
+
+scalar DateTime
+
+scalar Upload
+
+input File {
+  name: String!
+  type: String!
+  size: Int!
+  path: String!
+}
+
+type Image {
+  filename: String
+  width: Int
+  height: Int
+}
+
+type ImageWithUrl {
+  filename: String
+  width: Int
+  height: Int
+  url: String
+}
+
+input ImageInput {
+  filename: String
+  width: Int
+  height: Int
+}
+
+# pagination
+input ConnectionInput {
+  first: Int
+  after: String
+  last: Int
+  before: String
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+}

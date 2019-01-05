@@ -1,0 +1,22 @@
+type Category {
+  id: String!
+  name: String!
+  image: String
+  products: [Product]
+}
+
+extend type Query {
+  categories(text: String, categoryConnection: ConnectionInput): CategoryConnection!
+  category(id: String): Category
+}
+
+type CategoryConnection {
+  edges: [CategoryEdge!]!
+  pageInfo: PageInfo!
+  total: Int!
+}
+
+type CategoryEdge {
+  cursor: String!
+  node: Category!
+}

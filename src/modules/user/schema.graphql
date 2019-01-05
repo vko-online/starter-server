@@ -1,0 +1,41 @@
+type User {
+  id: String! # unique id for the user
+  email: String! # this is the name we'll show other users
+  avatar: Image # image file
+  avatar_url: String # full path to image
+  fullName: String
+  role: String
+
+  badgeCount: Int
+  registrationId: String
+  jwt: String # json web token for access
+}
+
+
+extend type Query {
+  users(text: String): [User]
+  currentUser: User
+}
+
+extend type Mutation {
+  updateUser(user: UpdateUserInput!): User
+  resetPassword(phone: String): Boolean
+  changePassword(oldPassword: String!, newPassword: String!): Boolean
+}
+
+input UpdateUserInput {
+  avatarFile: File # probably unused, need to check mobile
+  avatar: ImageInput
+  fullName: String
+  email: String
+  registrationId: String
+}
+
+input CreateUserInput {
+  avatarFile: File # probably unused, need to check mobile
+  avatar: ImageInput
+  avatarId: String
+  fullName: String!
+  email: String
+  password: String
+}

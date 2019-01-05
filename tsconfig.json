@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es6",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "baseUrl": "src",
+    "paths": {
+      "@models/*": ["models/*"],
+      "@models": ["models/index"],
+      "@modules/*": ["modules/*"],
+      "@modules": ["modules/index"],
+      "@config": ["config"]
+    },
+    "lib": [
+      "es6"
+    ],
+    "resolveJsonModule": true
+  }
+}

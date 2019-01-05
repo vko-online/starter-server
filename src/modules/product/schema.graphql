@@ -1,0 +1,16 @@
+type Product {
+  id: String!
+  name: String!
+  prices (priceConnection: ConnectionInput): PriceConnection
+}
+
+type PriceConnection {
+  edges: [PriceEdge]
+  pageInfo: PageInfo!
+  total: Int!
+}
+
+type PriceEdge {
+  cursor: String!
+  node: Price!
+}

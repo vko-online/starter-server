@@ -1,0 +1,5 @@
+type Price {
+  id: String!
+  date: Date!
+  value: Int!
+}

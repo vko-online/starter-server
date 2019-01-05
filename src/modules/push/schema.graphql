@@ -1,0 +1,14 @@
+extend type Mutation {
+  sendNotification(input: CreatePushInput!): [String]
+}
+
+input CreatePushInput {
+  userIds: [String]
+  message: String
+  data: [PushDataInput]
+}
+
+input PushDataInput {
+  key: String
+  value: String
+}

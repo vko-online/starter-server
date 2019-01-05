@@ -1,0 +1,8 @@
+uploads
+dist
+node_modules
+combined.log
+error.log
+yarn.lock
+package-json.lock
+.env
