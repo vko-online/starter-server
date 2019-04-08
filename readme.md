@@ -15,6 +15,3 @@ copy __.env.example__ to __.env__
 - `yarn start` - Run server
 - `yarn watch` - Run server and watch file changes
 
-### BA
-
-- вопрос: в графике показываем изменения цен, это цена прошедших сделок(продаж/покупок) или цена за продукт которую ввел админ (через excel файл например)
