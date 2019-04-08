@@ -1,4 +1,4 @@
-## Turkistan server companion
+## App server companion
 
 
 ### Environment vars
